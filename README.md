@@ -11,3 +11,10 @@ Este proyecto es una aplicación desarrollada en C# con el patrón MVC para admi
 ------------
 El proyecto fue creado como parte de un trabajo académico y tiene como objetivo principal la acumulación y análisis de datos de miles de viviendas y millones de habitantes en el estado de Coahuila.
 
+![Login](img/login.png)
+
+## Requerimientos Técnicos
+- **Sistema Operativo:** Windows 
+- **Framework:** .NET Framework 7.0
+- **Base de Datos:** MySQL 8.0
+

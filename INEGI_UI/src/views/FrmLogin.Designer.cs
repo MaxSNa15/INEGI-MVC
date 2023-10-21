@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             pnlLogo = new Panel();
             txtNick = new TextBox();
             panel1 = new Panel();
@@ -36,11 +37,15 @@
             lblTitle = new Label();
             btnLogin = new Button();
             lnlSalir = new LinkLabel();
+            pcbLogo = new PictureBox();
+            pnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             SuspendLayout();
             // 
             // pnlLogo
             // 
             pnlLogo.BackColor = Color.FromArgb(0, 122, 204);
+            pnlLogo.Controls.Add(pcbLogo);
             pnlLogo.Dock = DockStyle.Left;
             pnlLogo.Location = new Point(0, 0);
             pnlLogo.Name = "pnlLogo";
@@ -128,6 +133,16 @@
             lnlSalir.TabStop = true;
             lnlSalir.Text = "SALIR";
             // 
+            // pcbLogo
+            // 
+            pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
+            pcbLogo.Location = new Point(12, 63);
+            pcbLogo.Name = "pcbLogo";
+            pcbLogo.Size = new Size(223, 182);
+            pcbLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            pcbLogo.TabIndex = 0;
+            pcbLogo.TabStop = false;
+            // 
             // FrmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -147,6 +162,8 @@
             Opacity = 0.9D;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            pnlLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -161,5 +178,6 @@
         private Label lblTitle;
         public Button btnLogin;
         public LinkLabel lnlSalir;
+        private PictureBox pcbLogo;
     }
 }
