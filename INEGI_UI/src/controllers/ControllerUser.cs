@@ -13,6 +13,13 @@ namespace INEGI.src.controllers
         {
             this.mdUsuer = mdUsuer;
             this.vwLogin = vwLogin;
+            //Eventos
+            this.vwLogin.lnlSalir.Click += new EventHandler(Salir);
+        }
+
+        private void Salir(object? sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
 
         public void RunApp()

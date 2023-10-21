@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             pnlLogo = new Panel();
+            pcbLogo = new PictureBox();
             txtNick = new TextBox();
             panel1 = new Panel();
             panel2 = new Panel();
@@ -37,7 +38,6 @@
             lblTitle = new Label();
             btnLogin = new Button();
             lnlSalir = new LinkLabel();
-            pcbLogo = new PictureBox();
             pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             SuspendLayout();
@@ -51,6 +51,16 @@
             pnlLogo.Name = "pnlLogo";
             pnlLogo.Size = new Size(250, 330);
             pnlLogo.TabIndex = 0;
+            // 
+            // pcbLogo
+            // 
+            pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
+            pcbLogo.Location = new Point(12, 63);
+            pcbLogo.Name = "pcbLogo";
+            pcbLogo.Size = new Size(223, 182);
+            pcbLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            pcbLogo.TabIndex = 0;
+            pcbLogo.TabStop = false;
             // 
             // txtNick
             // 
@@ -91,14 +101,14 @@
             txtPass.PasswordChar = '*';
             txtPass.PlaceholderText = "Password";
             txtPass.Size = new Size(407, 20);
-            txtPass.TabIndex = 3;
+            txtPass.TabIndex = 2;
             // 
             // lblTitle
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Century Gothic", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.DimGray;
-            lblTitle.Location = new Point(467, 26);
+            lblTitle.Location = new Point(477, 26);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(107, 36);
             lblTitle.TabIndex = 5;
@@ -113,10 +123,10 @@
             btnLogin.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
             btnLogin.FlatStyle = FlatStyle.Popup;
             btnLogin.ForeColor = Color.LightGray;
-            btnLogin.Location = new Point(326, 210);
+            btnLogin.Location = new Point(326, 205);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(407, 35);
-            btnLogin.TabIndex = 6;
+            btnLogin.Size = new Size(407, 40);
+            btnLogin.TabIndex = 3;
             btnLogin.Text = "LOGIN";
             btnLogin.UseVisualStyleBackColor = false;
             // 
@@ -124,24 +134,14 @@
             // 
             lnlSalir.ActiveLinkColor = Color.FromArgb(0, 122, 204);
             lnlSalir.AutoSize = true;
-            lnlSalir.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lnlSalir.LinkColor = Color.DimGray;
-            lnlSalir.Location = new Point(509, 270);
+            lnlSalir.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lnlSalir.LinkColor = Color.White;
+            lnlSalir.Location = new Point(502, 270);
             lnlSalir.Name = "lnlSalir";
-            lnlSalir.Size = new Size(40, 17);
-            lnlSalir.TabIndex = 7;
+            lnlSalir.Size = new Size(53, 21);
+            lnlSalir.TabIndex = 0;
             lnlSalir.TabStop = true;
             lnlSalir.Text = "SALIR";
-            // 
-            // pcbLogo
-            // 
-            pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
-            pcbLogo.Location = new Point(12, 63);
-            pcbLogo.Name = "pcbLogo";
-            pcbLogo.Size = new Size(223, 182);
-            pcbLogo.SizeMode = PictureBoxSizeMode.Zoom;
-            pcbLogo.TabIndex = 0;
-            pcbLogo.TabStop = false;
             // 
             // FrmLogin
             // 
