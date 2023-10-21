@@ -6,12 +6,14 @@ namespace INEGI.src.controllers
 {
     public class ControllerUser
     {
-        private ModelUsuer mdUsuer;
+        private QueryUser qyUser;
+        private ModelUser mdUser;
         private FrmLogin vwLogin;
 
-        public ControllerUser(ModelUsuer mdUsuer, FrmLogin vwLogin)
+        public ControllerUser(QueryUser qyUser ,ModelUser mdUser, FrmLogin vwLogin)
         {
-            this.mdUsuer = mdUsuer;
+            this.qyUser = qyUser;
+            this.mdUser = mdUser;
             this.vwLogin = vwLogin;
             //Eventos
             this.vwLogin.lnlSalir.Click += new EventHandler(Salir);
@@ -25,10 +27,10 @@ namespace INEGI.src.controllers
 
         private void Ingresar(object? sender, EventArgs e)
         {
-            mdUsuer.nickname = vwLogin.txtNick.Text;
-            mdUsuer.password = vwLogin.txtPass.Text;
-            QueryUser queryUser = new QueryUser();
-            if (queryUser.Login(mdUsuer))
+            mdUser.nickname = vwLogin.txtNick.Text;
+            mdUser.password = vwLogin.txtPass.Text;
+            
+            if (qyUser.Login(mdUser))
             {
                 MessageBox.Show("Bienvenido", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

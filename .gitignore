@@ -1,7 +1,5 @@
 .vs/
-.vs/INEGI/
 Properties/
 bin/
 obj/
-obj/Debug/
-obj/Debug/net7.0-windows/
+

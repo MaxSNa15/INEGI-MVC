@@ -10,9 +10,10 @@ namespace INEGI.src
         [STAThread]
         static void Main()
         {
-            ModelUsuer mdUsuer = new ModelUsuer();
+            ModelUser mdUsuer = new ModelUser();
             FrmLogin vwLogin = new FrmLogin();
-            ControllerUser ctUser = new ControllerUser(mdUsuer, vwLogin);
+            QueryUser qyUser = new QueryUser();
+            ControllerUser ctUser = new ControllerUser(qyUser ,mdUsuer, vwLogin);
             ctUser.RunApp();
         }
     }
