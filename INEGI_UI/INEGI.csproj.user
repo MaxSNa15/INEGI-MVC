@@ -4,5 +4,11 @@
     <Compile Update="src\views\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="src\views\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\views\FrmVivienda.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -33,6 +33,9 @@ namespace INEGI.src.controllers
             if (qyUser.Login(mdUser))
             {
                 MessageBox.Show("Bienvenido", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                vwLogin.Hide();
+                ControllerPricipal controllerPricipal = new ControllerPricipal(new FrmPrincipal());
+                controllerPricipal.RunForm();
             }
             else
             {

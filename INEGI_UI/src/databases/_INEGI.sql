@@ -13,7 +13,9 @@ CREATE TABLE Vivienda (
 -- Tabla Municipios
 CREATE TABLE Municipios (
     ID_Municipio INT AUTO_INCREMENT PRIMARY KEY,
-    Nombre VARCHAR(255) NOT NULL
+    Nombre VARCHAR(255) NOT NULL,
+    Region VARCHAR(255) NOT NULL,
+    Poblacion2020 INT NOT NULL
 );
 
 -- Tabla Localidades
@@ -53,5 +55,7 @@ CREATE TABLE ViviendaActividad (
 CREATE TABLE Usuario (
     ID_Usuario INT AUTO_INCREMENT PRIMARY KEY,
     Nickname VARCHAR(255) NOT NULL,
-    Contrasena VARCHAR(255) NOT NULL
+    Contrasena VARCHAR(255) NOT NULL,
+    FIRSTNAME VARCHAR(255),
+    LASTNAME VARCHAR(255)
 );

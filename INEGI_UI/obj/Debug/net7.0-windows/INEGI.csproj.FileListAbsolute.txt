@@ -44,3 +44,5 @@ E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\INEGI_UI\obj\Debug\net7.0-windows\
 E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\INEGI_UI\obj\Debug\net7.0-windows\INEGI.csproj.GenerateResource.cache
 E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\INEGI_UI\obj\Debug\net7.0-windows\INEGI.csproj.CopyComplete
 E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\INEGI_UI\obj\Debug\net7.0-windows\INEGI.Properties.Resources.resources
+E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\INEGI_UI\obj\Debug\net7.0-windows\INEGI.src.views.FrmPrincipal.resources
+E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\INEGI_UI\obj\Debug\net7.0-windows\INEGI.src.views.FrmVivienda.resources
