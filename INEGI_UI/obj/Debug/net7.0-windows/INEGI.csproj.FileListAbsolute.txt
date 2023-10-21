@@ -1,0 +1,14 @@
+E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\bin\Debug\net7.0-windows\INEGI.exe
+E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\bin\Debug\net7.0-windows\INEGI.deps.json
+E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\bin\Debug\net7.0-windows\INEGI.runtimeconfig.json
+E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\bin\Debug\net7.0-windows\INEGI.dll
+E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\bin\Debug\net7.0-windows\INEGI.pdb
+E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\obj\Debug\net7.0-windows\INEGI.GeneratedMSBuildEditorConfig.editorconfig
+E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\obj\Debug\net7.0-windows\INEGI.AssemblyInfoInputs.cache
+E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\obj\Debug\net7.0-windows\INEGI.AssemblyInfo.cs
+E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\obj\Debug\net7.0-windows\INEGI.csproj.CoreCompileInputs.cache
+E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\obj\Debug\net7.0-windows\INEGI.dll
+E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\obj\Debug\net7.0-windows\refint\INEGI.dll
+E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\obj\Debug\net7.0-windows\INEGI.pdb
+E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\obj\Debug\net7.0-windows\INEGI.genruntimeconfig.cache
+E:\Codes\_-_SchoolGit_-_\Arqui_Software\INEGI\obj\Debug\net7.0-windows\ref\INEGI.dll
