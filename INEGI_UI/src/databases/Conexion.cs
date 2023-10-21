@@ -4,12 +4,21 @@ namespace INEGI.src.databases
 {
     public class Conexion
     {
-        private const string SERVER = "localhost";
-        private const string DATABASE = "censopoblacion";
-        private const string PORT = "3306";
-        private const string USER = "root";
-        private const string PASSWORD = "root";
+        private readonly string SERVER = "localhost";
+        private readonly string DATABASE = "censopoblacion";
+        private readonly string PORT = "3306";
+        private readonly string USER = "root";
+        private readonly string PASSWORD = "root";
         private MySqlConnection? conn;
+
+        // 1-Private static instance
+        private static Conexion? instance = null;
+
+        // 2-Public static property to access the instance
+        public static Conexion Instance => instance ??= new Conexion();
+
+        // 3-Private constructor
+        private Conexion() {}
 
         public MySqlConnection GetConnection()
         {
