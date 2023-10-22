@@ -18,6 +18,6 @@ namespace INEGI.src.models
 
         public string? direccion { get; set; }
         public TipoVivienda tipovi { get; set; }
-        public int idMunicipio { get; set; }
+        public int idLocalidad { get; set; }
     }
 }

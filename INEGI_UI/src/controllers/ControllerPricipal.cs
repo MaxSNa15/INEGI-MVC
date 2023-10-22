@@ -29,11 +29,11 @@ namespace INEGI.src.controllers
         private void LoadForm(object? sender, EventArgs e)
         {
             
-            vwPrincipal.lblFirst.Text = qyUser.GetFullName(mdUser.nickname)[0];
-            vwPrincipal.lblLast.Text = qyUser.GetFullName(mdUser.nickname)[1];
+            vwPrincipal.lblFirst.Text = qyUser.GetFullName(mdUser.nickname!)[0];
+            vwPrincipal.lblLast.Text = qyUser.GetFullName(mdUser.nickname!)[1];
         }
 
-    #region Menu Izquierdo
+        #region Menu Izquierdo
         // METODO PARA ABRIR FORMULARIOS DENTRO DEL PANEL
         private void OpenForm<MyForm>()where MyForm :Form,new() // METODO GENERICO, con condiciones de que sea un formulario y que tenga un constructor vacio
         {
@@ -102,7 +102,7 @@ namespace INEGI.src.controllers
                 vwPrincipal.btnUsu.BackColor = Color.FromArgb(4,41,68);
             }
         }
-    #endregion
+        #endregion
 
         private void Logout(object? sender, EventArgs e)
         {
