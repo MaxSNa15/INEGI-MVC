@@ -12,10 +12,10 @@ namespace INEGI.src.databases
         private MySqlConnection? conn;
 
         // 1-Private static instance
-        private static Conexion? instance = null;
+        private static Conexion? _instance;
 
         // 2-Public static property to access the instance
-        public static Conexion Instance => instance ??= new Conexion();
+        public static Conexion Instance => _instance ??= new Conexion();
 
         // 3-Private constructor
         private Conexion() {}

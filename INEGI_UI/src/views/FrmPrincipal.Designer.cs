@@ -31,13 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             pnlPrincipal = new Panel();
             pnlForms = new Panel();
+            pictureBox1 = new PictureBox();
             pnlMenu = new Panel();
-            button2 = new Button();
-            button1 = new Button();
+            btnAct = new Button();
+            btnHab = new Button();
             btnVivi = new Button();
             pnlTitulo = new Panel();
             pcbClose = new PictureBox();
             pnlPrincipal.SuspendLayout();
+            pnlForms.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnlMenu.SuspendLayout();
             pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbClose).BeginInit();
@@ -58,17 +61,29 @@
             // pnlForms
             // 
             pnlForms.BackColor = Color.Snow;
+            pnlForms.Controls.Add(pictureBox1);
             pnlForms.Dock = DockStyle.Fill;
             pnlForms.Location = new Point(200, 40);
             pnlForms.Name = "pnlForms";
             pnlForms.Size = new Size(960, 610);
             pnlForms.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(960, 610);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
             // pnlMenu
             // 
             pnlMenu.BackColor = Color.FromArgb(4, 41, 68);
-            pnlMenu.Controls.Add(button2);
-            pnlMenu.Controls.Add(button1);
+            pnlMenu.Controls.Add(btnAct);
+            pnlMenu.Controls.Add(btnHab);
             pnlMenu.Controls.Add(btnVivi);
             pnlMenu.Dock = DockStyle.Left;
             pnlMenu.Location = new Point(0, 40);
@@ -76,27 +91,45 @@
             pnlMenu.Size = new Size(200, 610);
             pnlMenu.TabIndex = 1;
             // 
-            // button2
+            // btnAct
             // 
-            button2.Location = new Point(12, 186);
-            button2.Name = "button2";
-            button2.Size = new Size(182, 39);
-            button2.TabIndex = 2;
-            button2.Text = "button1";
-            button2.UseVisualStyleBackColor = true;
+            btnAct.FlatAppearance.BorderSize = 0;
+            btnAct.FlatAppearance.MouseDownBackColor = Color.FromArgb(35, 50, 70);
+            btnAct.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
+            btnAct.FlatStyle = FlatStyle.Flat;
+            btnAct.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAct.ForeColor = Color.Gainsboro;
+            btnAct.Location = new Point(12, 248);
+            btnAct.Name = "btnAct";
+            btnAct.Size = new Size(182, 39);
+            btnAct.TabIndex = 2;
+            btnAct.Text = "Actividad Economica";
+            btnAct.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnHab
             // 
-            button1.Location = new Point(12, 141);
-            button1.Name = "button1";
-            button1.Size = new Size(182, 39);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnHab.FlatAppearance.BorderSize = 0;
+            btnHab.FlatAppearance.MouseDownBackColor = Color.FromArgb(35, 50, 70);
+            btnHab.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
+            btnHab.FlatStyle = FlatStyle.Flat;
+            btnHab.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnHab.ForeColor = Color.Gainsboro;
+            btnHab.Location = new Point(12, 189);
+            btnHab.Name = "btnHab";
+            btnHab.Size = new Size(182, 39);
+            btnHab.TabIndex = 1;
+            btnHab.Text = "Habitantes";
+            btnHab.UseVisualStyleBackColor = true;
             // 
             // btnVivi
             // 
-            btnVivi.Location = new Point(12, 96);
+            btnVivi.FlatAppearance.BorderSize = 0;
+            btnVivi.FlatAppearance.MouseDownBackColor = Color.FromArgb(35, 50, 70);
+            btnVivi.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
+            btnVivi.FlatStyle = FlatStyle.Flat;
+            btnVivi.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnVivi.ForeColor = Color.Gainsboro;
+            btnVivi.Location = new Point(12, 131);
             btnVivi.Name = "btnVivi";
             btnVivi.Size = new Size(182, 39);
             btnVivi.TabIndex = 0;
@@ -137,6 +170,8 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmPrincipal";
             pnlPrincipal.ResumeLayout(false);
+            pnlForms.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             pnlMenu.ResumeLayout(false);
             pnlTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pcbClose).EndInit();
@@ -146,11 +181,12 @@
         #endregion
         public PictureBox pcbClose;
         public Button btnVivi;
-        public Button button2;
-        public Button button1;
+        public Button btnAct;
+        public Button btnHab;
         public Panel pnlPrincipal;
         public Panel pnlTitulo;
         public Panel pnlForms;
         public Panel pnlMenu;
+        private PictureBox pictureBox1;
     }
 }

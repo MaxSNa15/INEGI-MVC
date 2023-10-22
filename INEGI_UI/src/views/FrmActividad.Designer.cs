@@ -1,6 +1,6 @@
 ﻿namespace INEGI.src.views
 {
-    partial class FrmVivienda
+    partial class FrmActividad
     {
         /// <summary>
         /// Required designer variable.
@@ -37,9 +37,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(52, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Vivienda";
+            label1.Size = new Size(57, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Actividad";
             // 
             // btnClose
             // 
@@ -49,11 +49,11 @@
             btnClose.Location = new Point(873, 12);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(75, 23);
-            btnClose.TabIndex = 1;
+            btnClose.TabIndex = 2;
             btnClose.Text = "CERRAR";
             btnClose.UseVisualStyleBackColor = true;
             // 
-            // FrmVivienda
+            // FrmActividad
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -62,8 +62,8 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             MinimumSize = new Size(150, 150);
-            Name = "FrmVivienda";
-            Text = "Vivienda";
+            Name = "FrmActividad";
+            Text = "Actividad";
             ResumeLayout(false);
             PerformLayout();
         }

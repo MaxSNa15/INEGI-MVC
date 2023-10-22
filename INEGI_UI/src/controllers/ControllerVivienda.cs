@@ -10,8 +10,12 @@ namespace INEGI.src.controllers
         {
             this.vwVivienda = vwVivienda;
             // Eventos
+            this.vwVivienda.btnClose.Click += new EventHandler(Close);
         }
 
-        
+        private void Close(object? sender, EventArgs e)
+        {
+            vwVivienda.Close();
+        }
     }
 }

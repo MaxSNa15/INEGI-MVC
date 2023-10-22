@@ -12,6 +12,8 @@ namespace INEGI.src.controllers
             // Eventos
             this.vwPrincipal.pcbClose.Click += new EventHandler(Close);
             this.vwPrincipal.btnVivi.Click += new EventHandler(OpenVivienda);
+            this.vwPrincipal.btnHab.Click += new EventHandler(OpenHabitante);
+            this.vwPrincipal.btnAct.Click += new EventHandler(OpenActividad);
         }
 
         // METODO PARA ABRIR FORMULARIOS DENTRO DEL PANEL
@@ -24,11 +26,15 @@ namespace INEGI.src.controllers
             {
                 formulario = new MyForm // Crea una instancia del formulario
                 {
-                    TopLevel = false // Indica que el formulario no es de nivel superior
+                    TopLevel = false, // Indica que el formulario no es de nivel superior
+                    FormBorderStyle = FormBorderStyle.None, // Indica que el formulario no tiene borde
+                    Dock = DockStyle.Fill // Indica que el formulario se ajusta al tamaño del panel
                 }; 
                 vwPrincipal.pnlForms.Controls.Add(formulario); // Agrega el formulario al panel
                 vwPrincipal.pnlForms.Tag = formulario; // Asigna el formulario al panel
                 formulario.Show(); // Muestra el formulario
+                formulario.BringToFront();
+                formulario.FormClosed += new FormClosedEventHandler(CloseForms); // Evento para cerrar el formulario
             }
             else
             {
@@ -38,8 +44,36 @@ namespace INEGI.src.controllers
 
         private void OpenVivienda(object? sender, EventArgs e)
         {
-            MessageBox.Show("Vivienda");
             OpenForm<FrmVivienda>();
+            vwPrincipal.btnVivi.BackColor = Color.FromArgb(12,61,92);
+        }
+
+        private void OpenHabitante(object? sender, EventArgs e)
+        {
+            OpenForm<FrmHabitante>();
+            vwPrincipal.btnHab.BackColor = Color.FromArgb(12,61,92);
+        }
+
+        private void OpenActividad(object? sender, EventArgs e)
+        {
+            OpenForm<FrmActividad>();
+            vwPrincipal.btnAct.BackColor = Color.FromArgb(12,61,92);
+        }
+
+        private void CloseForms(object? sender, FormClosedEventArgs e)
+        {
+            if(Application.OpenForms["FrmVivienda"] == null)
+            {
+                vwPrincipal.btnVivi.BackColor = Color.FromArgb(4,41,68);
+            }
+            if(Application.OpenForms["FrmHabitante"] == null)
+            {
+                vwPrincipal.btnHab.BackColor = Color.FromArgb(4,41,68);
+            }
+            if(Application.OpenForms["FrmActividad"] == null)
+            {
+                vwPrincipal.btnAct.BackColor = Color.FromArgb(4,41,68);
+            }
         }
 
         private void Close(object? sender, EventArgs e)
