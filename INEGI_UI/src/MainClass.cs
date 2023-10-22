@@ -13,8 +13,8 @@ namespace INEGI.src
             ModelUser mdUsuer = new ModelUser();
             FrmLogin vwLogin = new FrmLogin();
             QueryUser qyUser = new QueryUser();
-            ControllerUser ctUser = new ControllerUser(qyUser ,mdUsuer, vwLogin);
-            ctUser.RunApp();
+            ControllerLogin ctLogin = new ControllerLogin(qyUser ,mdUsuer, vwLogin);
+            ctLogin.RunApp();
         }
     }
 }

@@ -38,6 +38,7 @@
             lblTitle = new Label();
             btnLogin = new Button();
             lnlSalir = new LinkLabel();
+            lblError = new Label();
             pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             SuspendLayout();
@@ -67,8 +68,8 @@
             txtNick.BackColor = Color.FromArgb(15, 15, 15);
             txtNick.BorderStyle = BorderStyle.None;
             txtNick.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNick.ForeColor = Color.DimGray;
-            txtNick.Location = new Point(326, 85);
+            txtNick.ForeColor = Color.WhiteSmoke;
+            txtNick.Location = new Point(326, 78);
             txtNick.Name = "txtNick";
             txtNick.PlaceholderText = "Usuario";
             txtNick.Size = new Size(407, 20);
@@ -77,7 +78,7 @@
             // panel1
             // 
             panel1.BackColor = Color.DimGray;
-            panel1.Location = new Point(326, 111);
+            panel1.Location = new Point(326, 104);
             panel1.Name = "panel1";
             panel1.Size = new Size(407, 2);
             panel1.TabIndex = 2;
@@ -85,7 +86,7 @@
             // panel2
             // 
             panel2.BackColor = Color.DimGray;
-            panel2.Location = new Point(326, 165);
+            panel2.Location = new Point(326, 158);
             panel2.Name = "panel2";
             panel2.Size = new Size(407, 2);
             panel2.TabIndex = 4;
@@ -95,8 +96,8 @@
             txtPass.BackColor = Color.FromArgb(15, 15, 15);
             txtPass.BorderStyle = BorderStyle.None;
             txtPass.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPass.ForeColor = Color.DimGray;
-            txtPass.Location = new Point(326, 139);
+            txtPass.ForeColor = Color.WhiteSmoke;
+            txtPass.Location = new Point(326, 132);
             txtPass.Name = "txtPass";
             txtPass.PasswordChar = '*';
             txtPass.PlaceholderText = "Password";
@@ -108,7 +109,7 @@
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Century Gothic", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.DimGray;
-            lblTitle.Location = new Point(477, 26);
+            lblTitle.Location = new Point(471, 24);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(107, 36);
             lblTitle.TabIndex = 5;
@@ -123,7 +124,7 @@
             btnLogin.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
             btnLogin.FlatStyle = FlatStyle.Popup;
             btnLogin.ForeColor = Color.LightGray;
-            btnLogin.Location = new Point(326, 205);
+            btnLogin.Location = new Point(326, 228);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(407, 40);
             btnLogin.TabIndex = 3;
@@ -136,12 +137,24 @@
             lnlSalir.AutoSize = true;
             lnlSalir.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lnlSalir.LinkColor = Color.White;
-            lnlSalir.Location = new Point(502, 270);
+            lnlSalir.Location = new Point(503, 284);
             lnlSalir.Name = "lnlSalir";
             lnlSalir.Size = new Size(53, 21);
             lnlSalir.TabIndex = 0;
             lnlSalir.TabStop = true;
             lnlSalir.Text = "SALIR";
+            // 
+            // lblError
+            // 
+            lblError.AutoSize = true;
+            lblError.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblError.ForeColor = Color.Gainsboro;
+            lblError.Location = new Point(326, 187);
+            lblError.Name = "lblError";
+            lblError.Size = new Size(95, 17);
+            lblError.TabIndex = 6;
+            lblError.Text = "Error Message";
+            lblError.Visible = false;
             // 
             // FrmLogin
             // 
@@ -149,6 +162,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 15, 15);
             ClientSize = new Size(780, 330);
+            Controls.Add(lblError);
             Controls.Add(lnlSalir);
             Controls.Add(btnLogin);
             Controls.Add(lblTitle);
@@ -179,5 +193,6 @@
         public Button btnLogin;
         public LinkLabel lnlSalir;
         private PictureBox pcbLogo;
+        public Label lblError;
     }
 }

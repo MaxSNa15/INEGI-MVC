@@ -33,6 +33,12 @@
             pnlForms = new Panel();
             pictureBox1 = new PictureBox();
             pnlMenu = new Panel();
+            btnOut = new Button();
+            btnUsu = new Button();
+            pnlInfo = new Panel();
+            lblLast = new Label();
+            lblFirst = new Label();
+            pcbUser = new PictureBox();
             btnAct = new Button();
             btnHab = new Button();
             btnVivi = new Button();
@@ -42,6 +48,8 @@
             pnlForms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnlMenu.SuspendLayout();
+            pnlInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pcbUser).BeginInit();
             pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbClose).BeginInit();
             SuspendLayout();
@@ -82,6 +90,9 @@
             // pnlMenu
             // 
             pnlMenu.BackColor = Color.FromArgb(4, 41, 68);
+            pnlMenu.Controls.Add(btnOut);
+            pnlMenu.Controls.Add(btnUsu);
+            pnlMenu.Controls.Add(pnlInfo);
             pnlMenu.Controls.Add(btnAct);
             pnlMenu.Controls.Add(btnHab);
             pnlMenu.Controls.Add(btnVivi);
@@ -91,6 +102,82 @@
             pnlMenu.Size = new Size(200, 610);
             pnlMenu.TabIndex = 1;
             // 
+            // btnOut
+            // 
+            btnOut.FlatAppearance.BorderSize = 0;
+            btnOut.FlatAppearance.MouseDownBackColor = Color.FromArgb(35, 50, 70);
+            btnOut.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
+            btnOut.FlatStyle = FlatStyle.Flat;
+            btnOut.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnOut.ForeColor = Color.White;
+            btnOut.Location = new Point(12, 559);
+            btnOut.Name = "btnOut";
+            btnOut.Size = new Size(182, 39);
+            btnOut.TabIndex = 4;
+            btnOut.Text = "LOG OUT";
+            btnOut.UseVisualStyleBackColor = true;
+            // 
+            // btnUsu
+            // 
+            btnUsu.FlatAppearance.BorderSize = 0;
+            btnUsu.FlatAppearance.MouseDownBackColor = Color.FromArgb(35, 50, 70);
+            btnUsu.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
+            btnUsu.FlatStyle = FlatStyle.Flat;
+            btnUsu.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnUsu.ForeColor = Color.Gainsboro;
+            btnUsu.Location = new Point(12, 357);
+            btnUsu.Name = "btnUsu";
+            btnUsu.Size = new Size(182, 39);
+            btnUsu.TabIndex = 3;
+            btnUsu.Text = "Usuarios";
+            btnUsu.UseVisualStyleBackColor = true;
+            // 
+            // pnlInfo
+            // 
+            pnlInfo.BackColor = Color.FromArgb(30, 46, 67);
+            pnlInfo.Controls.Add(lblLast);
+            pnlInfo.Controls.Add(lblFirst);
+            pnlInfo.Controls.Add(pcbUser);
+            pnlInfo.Dock = DockStyle.Top;
+            pnlInfo.Location = new Point(0, 0);
+            pnlInfo.Name = "pnlInfo";
+            pnlInfo.Size = new Size(200, 168);
+            pnlInfo.TabIndex = 3;
+            // 
+            // lblLast
+            // 
+            lblLast.AutoSize = true;
+            lblLast.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblLast.ForeColor = Color.WhiteSmoke;
+            lblLast.Location = new Point(24, 133);
+            lblLast.Name = "lblLast";
+            lblLast.Size = new Size(155, 25);
+            lblLast.TabIndex = 2;
+            lblLast.Text = "Administrador";
+            lblLast.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblFirst
+            // 
+            lblFirst.AutoSize = true;
+            lblFirst.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblFirst.ForeColor = Color.WhiteSmoke;
+            lblFirst.Location = new Point(24, 99);
+            lblFirst.Name = "lblFirst";
+            lblFirst.Size = new Size(155, 25);
+            lblFirst.TabIndex = 1;
+            lblFirst.Text = "Administrador";
+            lblFirst.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // pcbUser
+            // 
+            pcbUser.Image = (Image)resources.GetObject("pcbUser.Image");
+            pcbUser.Location = new Point(59, 6);
+            pcbUser.Name = "pcbUser";
+            pcbUser.Size = new Size(80, 80);
+            pcbUser.SizeMode = PictureBoxSizeMode.Zoom;
+            pcbUser.TabIndex = 0;
+            pcbUser.TabStop = false;
+            // 
             // btnAct
             // 
             btnAct.FlatAppearance.BorderSize = 0;
@@ -99,7 +186,7 @@
             btnAct.FlatStyle = FlatStyle.Flat;
             btnAct.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnAct.ForeColor = Color.Gainsboro;
-            btnAct.Location = new Point(12, 248);
+            btnAct.Location = new Point(12, 291);
             btnAct.Name = "btnAct";
             btnAct.Size = new Size(182, 39);
             btnAct.TabIndex = 2;
@@ -114,7 +201,7 @@
             btnHab.FlatStyle = FlatStyle.Flat;
             btnHab.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnHab.ForeColor = Color.Gainsboro;
-            btnHab.Location = new Point(12, 189);
+            btnHab.Location = new Point(12, 232);
             btnHab.Name = "btnHab";
             btnHab.Size = new Size(182, 39);
             btnHab.TabIndex = 1;
@@ -129,7 +216,7 @@
             btnVivi.FlatStyle = FlatStyle.Flat;
             btnVivi.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnVivi.ForeColor = Color.Gainsboro;
-            btnVivi.Location = new Point(12, 131);
+            btnVivi.Location = new Point(12, 174);
             btnVivi.Name = "btnVivi";
             btnVivi.Size = new Size(182, 39);
             btnVivi.TabIndex = 0;
@@ -173,6 +260,9 @@
             pnlForms.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             pnlMenu.ResumeLayout(false);
+            pnlInfo.ResumeLayout(false);
+            pnlInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pcbUser).EndInit();
             pnlTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pcbClose).EndInit();
             ResumeLayout(false);
@@ -188,5 +278,11 @@
         public Panel pnlForms;
         public Panel pnlMenu;
         private PictureBox pictureBox1;
+        private PictureBox pcbUser;
+        public Panel pnlInfo;
+        public Button btnUsu;
+        public Button btnOut;
+        public Label lblLast;
+        public Label lblFirst;
     }
 }
