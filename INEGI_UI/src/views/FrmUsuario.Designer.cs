@@ -40,7 +40,7 @@
             lblPass = new Label();
             txtFirst = new TextBox();
             lblFirst = new Label();
-            textBox4 = new TextBox();
+            txtLast = new TextBox();
             lblLast = new Label();
             btnReg = new Button();
             btnMod = new Button();
@@ -97,7 +97,7 @@
             // 
             // txtID
             // 
-            txtID.Location = new Point(698, 138);
+            txtID.Location = new Point(700, 138);
             txtID.Name = "txtID";
             txtID.Size = new Size(212, 23);
             txtID.TabIndex = 0;
@@ -106,7 +106,7 @@
             // 
             lblID.AutoSize = true;
             lblID.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblID.Location = new Point(698, 114);
+            lblID.Location = new Point(700, 114);
             lblID.Name = "lblID";
             lblID.Size = new Size(31, 21);
             lblID.TabIndex = 26;
@@ -114,7 +114,7 @@
             // 
             // txtNick
             // 
-            txtNick.Location = new Point(698, 188);
+            txtNick.Location = new Point(700, 188);
             txtNick.Name = "txtNick";
             txtNick.Size = new Size(212, 23);
             txtNick.TabIndex = 1;
@@ -123,7 +123,7 @@
             // 
             lblNick.AutoSize = true;
             lblNick.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblNick.Location = new Point(698, 164);
+            lblNick.Location = new Point(700, 164);
             lblNick.Name = "lblNick";
             lblNick.Size = new Size(93, 21);
             lblNick.TabIndex = 28;
@@ -131,7 +131,7 @@
             // 
             // txtPass
             // 
-            txtPass.Location = new Point(698, 238);
+            txtPass.Location = new Point(700, 238);
             txtPass.Name = "txtPass";
             txtPass.Size = new Size(212, 23);
             txtPass.TabIndex = 2;
@@ -140,7 +140,7 @@
             // 
             lblPass.AutoSize = true;
             lblPass.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPass.Location = new Point(698, 214);
+            lblPass.Location = new Point(700, 214);
             lblPass.Name = "lblPass";
             lblPass.Size = new Size(107, 21);
             lblPass.TabIndex = 30;
@@ -148,7 +148,7 @@
             // 
             // txtFirst
             // 
-            txtFirst.Location = new Point(698, 288);
+            txtFirst.Location = new Point(700, 288);
             txtFirst.Name = "txtFirst";
             txtFirst.Size = new Size(212, 23);
             txtFirst.TabIndex = 3;
@@ -157,24 +157,24 @@
             // 
             lblFirst.AutoSize = true;
             lblFirst.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblFirst.Location = new Point(698, 264);
+            lblFirst.Location = new Point(700, 264);
             lblFirst.Name = "lblFirst";
             lblFirst.Size = new Size(77, 21);
             lblFirst.TabIndex = 32;
             lblFirst.Text = "Nombre:";
             // 
-            // textBox4
+            // txtLast
             // 
-            textBox4.Location = new Point(698, 338);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(212, 23);
-            textBox4.TabIndex = 4;
+            txtLast.Location = new Point(700, 338);
+            txtLast.Name = "txtLast";
+            txtLast.Size = new Size(212, 23);
+            txtLast.TabIndex = 4;
             // 
             // lblLast
             // 
             lblLast.AutoSize = true;
             lblLast.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblLast.Location = new Point(698, 314);
+            lblLast.Location = new Point(700, 314);
             lblLast.Name = "lblLast";
             lblLast.Size = new Size(78, 21);
             lblLast.TabIndex = 34;
@@ -209,7 +209,7 @@
             btnBus.BackColor = Color.FromArgb(255, 192, 128);
             btnBus.FlatAppearance.BorderSize = 0;
             btnBus.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            btnBus.Location = new Point(334, 483);
+            btnBus.Location = new Point(757, 367);
             btnBus.Name = "btnBus";
             btnBus.Size = new Size(155, 42);
             btnBus.TabIndex = 7;
@@ -221,7 +221,7 @@
             btnElim.BackColor = Color.FromArgb(255, 128, 128);
             btnElim.FlatAppearance.BorderSize = 0;
             btnElim.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            btnElim.Location = new Point(495, 483);
+            btnElim.Location = new Point(334, 483);
             btnElim.Name = "btnElim";
             btnElim.Size = new Size(155, 42);
             btnElim.TabIndex = 8;
@@ -237,7 +237,7 @@
             Controls.Add(btnBus);
             Controls.Add(btnMod);
             Controls.Add(btnReg);
-            Controls.Add(textBox4);
+            Controls.Add(txtLast);
             Controls.Add(lblLast);
             Controls.Add(txtFirst);
             Controls.Add(lblFirst);
@@ -273,7 +273,7 @@
         private Label lblPass;
         public TextBox txtFirst;
         private Label lblFirst;
-        public TextBox textBox4;
+        public TextBox txtLast;
         private Label lblLast;
         public DataGridView dgvUsuarios;
         public Button btnReg;

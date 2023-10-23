@@ -202,7 +202,6 @@ namespace INEGI.src.controllers
                 }
                 else
                 {
-                    
                     vwVivienda.txtNomLoc.Text = "";
                     vwVivienda.grbLocalidad.Visible = false;
                     // Habilita los botones

@@ -29,7 +29,7 @@ namespace INEGI.src.controllers
             this.vwHabitante.btnActu.Click += new EventHandler(UpdateHabitante);
         }
 
-        private void Load(object? sender, EventArgs e)
+        private void Actualizar()
         {
             vwHabitante.dtpNac.MaxDate = DateTime.Now;
 
@@ -54,32 +54,16 @@ namespace INEGI.src.controllers
             }
 
             vwHabitante.dgvHabitante.DataSource = qyHabitante.ListaHabitante();
+        }
 
+        private void Load(object? sender, EventArgs e)
+        {
+            Actualizar();
         }
 
         private void UpdateHabitante(object? sender, EventArgs e)
         {
-            if (vwHabitante.clbViviendo.Items.Count == 0)
-            {
-                vwHabitante.clbViviendo.Items.AddRange(qyVivienda.GetNameVivienda().ToArray());
-            }
-            else
-            {
-                vwHabitante.clbViviendo.Items.Clear();
-                vwHabitante.clbViviendo.Items.AddRange(qyVivienda.GetNameVivienda().ToArray());
-            }
-
-            if (vwHabitante.cmbGenero.Items.Count == 0)
-            {
-                vwHabitante.cmbGenero.DataSource = Enum.GetValues(typeof(ModelHabitante.Genero));
-            }
-            else
-            {   
-                vwHabitante.cmbGenero.DataSource = null; // Limpia el combobox
-                vwHabitante.cmbGenero.DataSource = Enum.GetValues(typeof(ModelHabitante.Genero));
-            }
-
-            vwHabitante.dgvHabitante.DataSource = qyHabitante.ListaHabitante();
+            Actualizar();
         }
 
         private void Cancel(object? sender, EventArgs e)

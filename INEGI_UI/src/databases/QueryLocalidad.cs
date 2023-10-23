@@ -62,7 +62,6 @@ namespace INEGI.src.databases
             using MySqlConnection conn = conexion.GetConnection();
             string query = "SELECT Nombre FROM localidades";
             using MySqlCommand cmd = new MySqlCommand(query, conn);
-
             try
             {
                 conn.Open();

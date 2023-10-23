@@ -1,5 +1,6 @@
 using MySql.Data.MySqlClient;
 using INEGI.src.models;
+using System.Data;
 
 namespace INEGI.src.databases
 {
@@ -41,9 +42,7 @@ namespace INEGI.src.databases
             using MySqlConnection conn = conexion.GetConnection();
             string query = "SELECT FIRSTNAME, LASTNAME FROM usuario WHERE Nickname = @nickname";
             using MySqlCommand cmd = new MySqlCommand(query, conn);
-
             cmd.Parameters.AddWithValue("@nickname", nickname);
-
             try
             {
                 conn.Open();
@@ -60,6 +59,50 @@ namespace INEGI.src.databases
             {
                 MessageBox.Show("Error al conectar con la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return fullName;
+            }
+        }
+    
+        public DataTable? ListaUser()
+        {
+            using MySqlConnection conn = conexion.GetConnection();
+            string query = "SELECT * FROM usuario";
+            using MySqlCommand cmd = new MySqlCommand(query, conn);
+            try
+            {
+                conn.Open();
+                cmd.Prepare();
+                using MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                return dt;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al conectar con la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+    
+        public bool Insert(ModelUser mdUser)
+        {
+            using MySqlConnection conn = conexion.GetConnection();
+            string query = "INSERT INTO usuario (Nickname, Contrasena, FirstName, LastName) VALUES (@nickname, @contrasena, @firstName, @lastName)";
+            using MySqlCommand cmd = new MySqlCommand(query, conn);
+            try
+            {
+                conn.Open();
+                cmd.Parameters.AddWithValue("@nickname", mdUser.nickname);
+                cmd.Parameters.AddWithValue("@contrasena", mdUser.password);
+                cmd.Parameters.AddWithValue("@firstName", mdUser.firstName);
+                cmd.Parameters.AddWithValue("@lastName", mdUser.lastName);
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al conectar con la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
     }

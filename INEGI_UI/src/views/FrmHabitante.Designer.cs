@@ -141,6 +141,7 @@
             dtpNac.Name = "dtpNac";
             dtpNac.Size = new Size(212, 23);
             dtpNac.TabIndex = 17;
+            dtpNac.Value = new DateTime(2023, 10, 22, 23, 25, 36, 0);
             // 
             // panel1
             // 
