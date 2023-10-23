@@ -68,6 +68,8 @@
             // btnClose
             // 
             btnClose.Cursor = Cursors.Hand;
+            btnClose.FlatAppearance.MouseDownBackColor = Color.Silver;
+            btnClose.FlatAppearance.MouseOverBackColor = Color.LightGray;
             btnClose.FlatStyle = FlatStyle.Popup;
             btnClose.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             btnClose.Location = new Point(873, 12);

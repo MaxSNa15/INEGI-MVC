@@ -33,6 +33,7 @@
             pnlForms = new Panel();
             pictureBox1 = new PictureBox();
             pnlMenu = new Panel();
+            btnDash = new Button();
             btnOut = new Button();
             btnUsu = new Button();
             pnlInfo = new Panel();
@@ -90,6 +91,7 @@
             // pnlMenu
             // 
             pnlMenu.BackColor = Color.FromArgb(4, 41, 68);
+            pnlMenu.Controls.Add(btnDash);
             pnlMenu.Controls.Add(btnOut);
             pnlMenu.Controls.Add(btnUsu);
             pnlMenu.Controls.Add(pnlInfo);
@@ -101,6 +103,21 @@
             pnlMenu.Name = "pnlMenu";
             pnlMenu.Size = new Size(200, 610);
             pnlMenu.TabIndex = 1;
+            // 
+            // btnDash
+            // 
+            btnDash.FlatAppearance.BorderSize = 0;
+            btnDash.FlatAppearance.MouseDownBackColor = Color.FromArgb(35, 50, 70);
+            btnDash.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
+            btnDash.FlatStyle = FlatStyle.Flat;
+            btnDash.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDash.ForeColor = Color.Gainsboro;
+            btnDash.Location = new Point(12, 385);
+            btnDash.Name = "btnDash";
+            btnDash.Size = new Size(182, 39);
+            btnDash.TabIndex = 5;
+            btnDash.Text = "Dashboard";
+            btnDash.UseVisualStyleBackColor = true;
             // 
             // btnOut
             // 
@@ -125,7 +142,7 @@
             btnUsu.FlatStyle = FlatStyle.Flat;
             btnUsu.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnUsu.ForeColor = Color.Gainsboro;
-            btnUsu.Location = new Point(12, 357);
+            btnUsu.Location = new Point(12, 338);
             btnUsu.Name = "btnUsu";
             btnUsu.Size = new Size(182, 39);
             btnUsu.TabIndex = 3;
@@ -201,7 +218,7 @@
             btnHab.FlatStyle = FlatStyle.Flat;
             btnHab.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnHab.ForeColor = Color.Gainsboro;
-            btnHab.Location = new Point(12, 232);
+            btnHab.Location = new Point(12, 244);
             btnHab.Name = "btnHab";
             btnHab.Size = new Size(182, 39);
             btnHab.TabIndex = 1;
@@ -216,7 +233,7 @@
             btnVivi.FlatStyle = FlatStyle.Flat;
             btnVivi.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnVivi.ForeColor = Color.Gainsboro;
-            btnVivi.Location = new Point(12, 174);
+            btnVivi.Location = new Point(12, 197);
             btnVivi.Name = "btnVivi";
             btnVivi.Size = new Size(182, 39);
             btnVivi.TabIndex = 0;
@@ -284,5 +301,6 @@
         public Button btnOut;
         public Label lblLast;
         public Label lblFirst;
+        public Button btnDash;
     }
 }
