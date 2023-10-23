@@ -91,6 +91,7 @@
             // btnCon
             // 
             btnCon.BackColor = Color.FromArgb(192, 255, 192);
+            btnCon.Cursor = Cursors.Hand;
             btnCon.FlatAppearance.BorderSize = 0;
             btnCon.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnCon.ForeColor = Color.Black;
@@ -105,6 +106,7 @@
             // btnCan
             // 
             btnCan.BackColor = Color.FromArgb(255, 128, 128);
+            btnCan.Cursor = Cursors.Hand;
             btnCan.FlatAppearance.BorderSize = 0;
             btnCan.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             btnCan.ForeColor = Color.Black;
@@ -151,6 +153,7 @@
             // btnGuaLoc
             // 
             btnGuaLoc.BackColor = Color.FromArgb(128, 255, 128);
+            btnGuaLoc.Cursor = Cursors.Hand;
             btnGuaLoc.FlatAppearance.BorderSize = 0;
             btnGuaLoc.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnGuaLoc.ForeColor = Color.Black;
@@ -195,6 +198,7 @@
             // btnGuaViv
             // 
             btnGuaViv.BackColor = Color.FromArgb(128, 255, 128);
+            btnGuaViv.Cursor = Cursors.Hand;
             btnGuaViv.FlatAppearance.BorderSize = 0;
             btnGuaViv.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnGuaViv.ForeColor = Color.Black;
@@ -263,6 +267,7 @@
             // 
             // btnLocalidad
             // 
+            btnLocalidad.Cursor = Cursors.Hand;
             btnLocalidad.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnLocalidad.Location = new Point(359, 478);
             btnLocalidad.Name = "btnLocalidad";
@@ -273,6 +278,7 @@
             // 
             // btnVivienda
             // 
+            btnVivienda.Cursor = Cursors.Hand;
             btnVivienda.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnVivienda.Location = new Point(490, 478);
             btnVivienda.Name = "btnVivienda";
@@ -284,6 +290,7 @@
             // btnSkip
             // 
             btnSkip.BackColor = Color.FromArgb(64, 0, 0);
+            btnSkip.Cursor = Cursors.Hand;
             btnSkip.FlatAppearance.BorderSize = 0;
             btnSkip.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnSkip.ForeColor = Color.White;

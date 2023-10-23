@@ -40,9 +40,10 @@
             dtpNac = new DateTimePicker();
             panel1 = new Panel();
             dgvHabitante = new DataGridView();
-            button1 = new Button();
-            btnActVivi = new Button();
-            btnActHab = new Button();
+            btnAgr = new Button();
+            btnActu = new Button();
+            lblViviInfo = new Label();
+            btnCan = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvHabitante).BeginInit();
             SuspendLayout();
             // 
@@ -73,9 +74,9 @@
             // clbViviendo
             // 
             clbViviendo.FormattingEnabled = true;
-            clbViviendo.Location = new Point(301, 108);
+            clbViviendo.Location = new Point(301, 125);
             clbViviendo.Name = "clbViviendo";
-            clbViviendo.Size = new Size(636, 166);
+            clbViviendo.Size = new Size(636, 148);
             clbViviendo.TabIndex = 4;
             // 
             // lblNombre
@@ -152,62 +153,74 @@
             // dgvHabitante
             // 
             dgvHabitante.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvHabitante.Location = new Point(12, 376);
+            dgvHabitante.Location = new Point(12, 347);
             dgvHabitante.Name = "dgvHabitante";
             dgvHabitante.RowTemplate.Height = 25;
             dgvHabitante.Size = new Size(925, 177);
             dgvHabitante.TabIndex = 19;
             // 
-            // button1
+            // btnAgr
             // 
-            button1.BackColor = Color.FromArgb(128, 255, 128);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(23, 301);
-            button1.Name = "button1";
-            button1.Size = new Size(144, 29);
-            button1.TabIndex = 20;
-            button1.Text = "AGREGAR";
-            button1.UseVisualStyleBackColor = false;
+            btnAgr.BackColor = Color.FromArgb(128, 255, 128);
+            btnAgr.Cursor = Cursors.Hand;
+            btnAgr.FlatAppearance.BorderSize = 0;
+            btnAgr.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAgr.Location = new Point(12, 301);
+            btnAgr.Name = "btnAgr";
+            btnAgr.Size = new Size(144, 29);
+            btnAgr.TabIndex = 20;
+            btnAgr.Text = "AGREGAR";
+            btnAgr.UseVisualStyleBackColor = false;
             // 
-            // btnActVivi
+            // btnActu
             // 
-            btnActVivi.BackColor = SystemColors.ActiveCaption;
-            btnActVivi.Cursor = Cursors.Hand;
-            btnActVivi.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnActVivi.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnActVivi.FlatStyle = FlatStyle.Popup;
-            btnActVivi.Font = new Font("Century Gothic", 7F, FontStyle.Regular, GraphicsUnit.Point);
-            btnActVivi.Location = new Point(836, 81);
-            btnActVivi.Name = "btnActVivi";
-            btnActVivi.Size = new Size(101, 24);
-            btnActVivi.TabIndex = 21;
-            btnActVivi.Text = "ACTUALIZAR";
-            btnActVivi.UseVisualStyleBackColor = false;
+            btnActu.BackColor = SystemColors.ActiveCaption;
+            btnActu.Cursor = Cursors.Hand;
+            btnActu.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnActu.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnActu.FlatStyle = FlatStyle.Popup;
+            btnActu.Font = new Font("Century Gothic", 7F, FontStyle.Regular, GraphicsUnit.Point);
+            btnActu.Location = new Point(766, 24);
+            btnActu.Name = "btnActu";
+            btnActu.Size = new Size(101, 24);
+            btnActu.TabIndex = 21;
+            btnActu.Text = "ACTUALIZAR";
+            btnActu.UseVisualStyleBackColor = false;
             // 
-            // btnActHab
+            // lblViviInfo
             // 
-            btnActHab.BackColor = SystemColors.ActiveCaption;
-            btnActHab.Cursor = Cursors.Hand;
-            btnActHab.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnActHab.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnActHab.FlatStyle = FlatStyle.Popup;
-            btnActHab.Font = new Font("Century Gothic", 7F, FontStyle.Regular, GraphicsUnit.Point);
-            btnActHab.Location = new Point(836, 347);
-            btnActHab.Name = "btnActHab";
-            btnActHab.Size = new Size(101, 24);
-            btnActHab.TabIndex = 22;
-            btnActHab.Text = "ACTUALIZAR";
-            btnActHab.UseVisualStyleBackColor = false;
+            lblViviInfo.AutoSize = true;
+            lblViviInfo.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblViviInfo.Location = new Point(497, 105);
+            lblViviInfo.Name = "lblViviInfo";
+            lblViviInfo.Size = new Size(289, 17);
+            lblViviInfo.TabIndex = 23;
+            lblViviInfo.Text = "(Direccion|||Tipo|||Localidad|||Municipio)";
+            // 
+            // btnCan
+            // 
+            btnCan.BackColor = Color.Red;
+            btnCan.Cursor = Cursors.Hand;
+            btnCan.FlatAppearance.BorderSize = 0;
+            btnCan.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCan.ForeColor = Color.White;
+            btnCan.Location = new Point(838, 90);
+            btnCan.Name = "btnCan";
+            btnCan.Size = new Size(99, 29);
+            btnCan.TabIndex = 24;
+            btnCan.Text = "CANCELAR";
+            btnCan.UseVisualStyleBackColor = false;
+            btnCan.Visible = false;
             // 
             // FrmHabitante
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(960, 610);
-            Controls.Add(btnActHab);
-            Controls.Add(btnActVivi);
-            Controls.Add(button1);
+            Controls.Add(btnCan);
+            Controls.Add(lblViviInfo);
+            Controls.Add(btnActu);
+            Controls.Add(btnAgr);
             Controls.Add(dgvHabitante);
             Controls.Add(panel1);
             Controls.Add(dtpNac);
@@ -224,7 +237,6 @@
             MinimumSize = new Size(150, 150);
             Name = "FrmHabitante";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FrmHabitante";
             ((System.ComponentModel.ISupportInitialize)dgvHabitante).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -243,9 +255,10 @@
         public DateTimePicker dtpNac;
         public CheckedListBox clbViviendo;
         public ComboBox cmbGenero;
-        public Button btnActVivi;
-        public Button btnActHab;
+        public Button btnActu;
         public DataGridView dgvHabitante;
-        public Button button1;
+        public Button btnAgr;
+        private Label lblViviInfo;
+        public Button btnCan;
     }
 }

@@ -224,7 +224,7 @@ namespace INEGI.src.controllers
             {
                 // Hacer un registro en la base de datos
                 mdVivienda.direccion = vwVivienda.txtDire.Text;
-                mdVivienda.tipovi = (ModelVivienda.TipoVivienda)vwVivienda.cmbTipo.SelectedIndex;
+                mdVivienda.tipovi = (ModelVivienda.TipoVivienda)vwVivienda.cmbTipo.SelectedIndex + 1;
                 mdVivienda.idLocalidad = localidadID;
                 // MessageBox.Show(mdVivienda.tipovi.ToString());
                 if(!qyVivienda.Insertar(mdVivienda))

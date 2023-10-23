@@ -36,5 +36,31 @@ namespace INEGI.src.databases
             }
         }
     
+        public List<string> GetNameVivienda()
+        {
+            List<string> vivienda = new List<string>();
+            using MySqlConnection conn = conexion.GetConnection();
+            string query = "SELECT v.Direccion, v.Tipo, l.Nombre AS NombreLocalidad, m.Nombre AS NombreMunicipio FROM Vivienda v JOIN Localidades l ON v.ID_Localidad = l.ID_Localidad JOIN Municipios m ON l.ID_Municipio = m.ID_Municipio";
+            using MySqlCommand cmd = new MySqlCommand(query, conn);
+        
+            try
+            {
+                conn.Open();
+                cmd.Prepare();
+                using MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string result = reader[0].ToString() + ", " + reader[1].ToString() + ", " + reader[2].ToString() + ", " + reader[3].ToString();
+                    vivienda.Add(result);
+                }
+                return vivienda;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al conectar con la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return vivienda;
+            }
+        }
+
     }
 }
