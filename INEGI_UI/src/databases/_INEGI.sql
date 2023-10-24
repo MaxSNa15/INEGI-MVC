@@ -2,6 +2,10 @@ CREATE DATABASE CensoPoblacion;
 
 USE CensoPoblacion;
 
+-- Permisos para el usuario root
+GRANT EXECUTE ON CensoPoblacion.* TO 'root'@'localhost';
+FLUSH PRIVILEGES;
+
 -- Tabla Municipios
 CREATE TABLE Municipios (
     ID_Municipio INT AUTO_INCREMENT PRIMARY KEY,

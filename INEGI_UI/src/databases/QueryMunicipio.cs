@@ -1,5 +1,4 @@
 using MySql.Data.MySqlClient;
-using INEGI.src.models;
 
 namespace INEGI.src.databases
 {

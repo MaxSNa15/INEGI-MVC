@@ -6,13 +6,16 @@ namespace INEGI.src.views
 {
     public partial class FrmDash : Form
     {
+        private QueryProce qyProce;
         private ControllerDash ctrlDash;
 
         public FrmDash()
         {
             InitializeComponent();
+            // Instancia
+            qyProce = new QueryProce();
             // Instancia del controlador
-            ctrlDash = new ControllerDash(this);
+            ctrlDash = new ControllerDash(qyProce, this);
         }
     }
 }

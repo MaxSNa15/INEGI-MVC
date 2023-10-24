@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v7.0": {
       "INEGI/1.0.0": {
         "dependencies": {
-          "MySql.Data": "8.1.0"
+          "MySql.Data": "8.1.0",
+          "WinForms.DataVisualization": "1.9.0"
         },
         "runtime": {
           "INEGI.dll": {}
@@ -219,6 +220,18 @@
       "System.Windows.Extensions/4.7.0": {
         "dependencies": {
           "System.Drawing.Common": "4.7.0"
+        }
+      },
+      "WinForms.DataVisualization/1.9.0": {
+        "runtime": {
+          "lib/net7.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.9.0.0"
+          },
+          "lib/net7.0-windows7.0/WinForms.DataVisualization.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.9.0.0"
+          }
         }
       },
       "ZstdSharp.Port/0.7.1": {
@@ -453,6 +466,13 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "WinForms.DataVisualization/1.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lRhRPS40V3o5dY38NwaIZyOPrD+bbFq+UjNCa/eAucMICrSFVUE9rO6H2G73xx65mZ94Q7lYw4BSaZRPlcxhxQ==",
+      "path": "winforms.datavisualization/1.9.0",
+      "hashPath": "winforms.datavisualization.1.9.0.nupkg.sha512"
     },
     "ZstdSharp.Port/0.7.1": {
       "type": "package",
