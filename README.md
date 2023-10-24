@@ -11,7 +11,12 @@ Este proyecto es una aplicación desarrollada en C# con el patrón MVC para admi
 ------------
 El proyecto fue creado como parte de un trabajo académico y tiene como objetivo principal la acumulación y análisis de datos de miles de viviendas y millones de habitantes en el estado.
 
+### Preview
 ![Login](img/login.png)
+### SQL
+![Login](img/data.png)
+### CLASS
+![Login](img/clases.png)
 
 ## Requerimientos Técnicos
 - **Sistema Operativo:** Windows 
