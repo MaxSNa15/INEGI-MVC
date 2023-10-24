@@ -56,5 +56,26 @@ namespace INEGI.src.databases
                 return actividad;
             }
         }
+    
+        public bool IngresarViviendaActividad(ModelActividad mdActividad)
+        {
+            using MySqlConnection conn = conexion.GetConnection();
+            string query = "INSERT INTO ViviendaActividad (ID_Vivienda, ID_Actividad) VALUES (@idVivienda, @idActividad)";
+            using MySqlCommand cmd = new MySqlCommand(query, conn);
+            try
+            {
+                conn.Open();
+                cmd.Parameters.AddWithValue("@idVivienda", mdActividad.idVivienda);
+                cmd.Parameters.AddWithValue("@idActividad", mdActividad.idActividad);
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                MessageBox.Show("Error al conectar con la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
     }
 }

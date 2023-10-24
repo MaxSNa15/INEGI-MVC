@@ -105,5 +105,80 @@ namespace INEGI.src.databases
                 return false;
             }
         }
+    
+        public bool Read(ModelUser mdUser)
+        {
+            using MySqlConnection conn = conexion.GetConnection();
+            string query = "SELECT * FROM usuario WHERE ID_Usuario = @ID_Usuario";
+            using MySqlCommand cmd = new MySqlCommand(query, conn);
+            try
+            {
+                conn.Open();
+                cmd.Parameters.AddWithValue("@ID_Usuario", mdUser.id);
+                cmd.Prepare();
+                using MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    mdUser.nickname = reader.GetString(1);
+                    mdUser.password = reader.GetString(2);
+                    mdUser.firstName = reader.GetString(3);
+                    mdUser.lastName = reader.GetString(4);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al conectar con la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        public bool Update(ModelUser mdUser)
+        {
+            using MySqlConnection conn = conexion.GetConnection();
+            string query = "UPDATE usuario SET Nickname = @nickname, Contrasena = @contrasena, FirstName = @firstName, LastName = @lastName WHERE ID_Usuario = @ID_Usuario";
+            using MySqlCommand cmd = new MySqlCommand(query, conn);
+            try
+            {
+                conn.Open();
+                cmd.Parameters.AddWithValue("@ID_Usuario", mdUser.id);
+                cmd.Parameters.AddWithValue("@nickname", mdUser.nickname);
+                cmd.Parameters.AddWithValue("@contrasena", mdUser.password);
+                cmd.Parameters.AddWithValue("@firstName", mdUser.firstName);
+                cmd.Parameters.AddWithValue("@lastName", mdUser.lastName);
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al conectar con la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        public bool Delete(ModelUser mdUser)
+        {
+            using MySqlConnection conn = conexion.GetConnection();
+            string query = "DELETE FROM usuario WHERE ID_Usuario = @ID_Usuario";
+            using MySqlCommand cmd = new MySqlCommand(query, conn);
+            try
+            {
+                conn.Open();
+                cmd.Parameters.AddWithValue("@ID_Usuario", mdUser.id);
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al conectar con la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
     }
 }

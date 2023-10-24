@@ -99,7 +99,7 @@
             // 
             txtID.Location = new Point(700, 138);
             txtID.Name = "txtID";
-            txtID.Size = new Size(212, 23);
+            txtID.Size = new Size(227, 23);
             txtID.TabIndex = 0;
             // 
             // lblID
@@ -116,7 +116,7 @@
             // 
             txtNick.Location = new Point(700, 188);
             txtNick.Name = "txtNick";
-            txtNick.Size = new Size(212, 23);
+            txtNick.Size = new Size(227, 23);
             txtNick.TabIndex = 1;
             // 
             // lblNick
@@ -133,7 +133,7 @@
             // 
             txtPass.Location = new Point(700, 238);
             txtPass.Name = "txtPass";
-            txtPass.Size = new Size(212, 23);
+            txtPass.Size = new Size(227, 23);
             txtPass.TabIndex = 2;
             // 
             // lblPass
@@ -150,7 +150,7 @@
             // 
             txtFirst.Location = new Point(700, 288);
             txtFirst.Name = "txtFirst";
-            txtFirst.Size = new Size(212, 23);
+            txtFirst.Size = new Size(227, 23);
             txtFirst.TabIndex = 3;
             // 
             // lblFirst
@@ -167,7 +167,7 @@
             // 
             txtLast.Location = new Point(700, 338);
             txtLast.Name = "txtLast";
-            txtLast.Size = new Size(212, 23);
+            txtLast.Size = new Size(227, 23);
             txtLast.TabIndex = 4;
             // 
             // lblLast
@@ -209,9 +209,9 @@
             btnBus.BackColor = Color.FromArgb(255, 192, 128);
             btnBus.FlatAppearance.BorderSize = 0;
             btnBus.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            btnBus.Location = new Point(757, 367);
+            btnBus.Location = new Point(771, 367);
             btnBus.Name = "btnBus";
-            btnBus.Size = new Size(155, 42);
+            btnBus.Size = new Size(156, 34);
             btnBus.TabIndex = 7;
             btnBus.Text = "BUSCAR";
             btnBus.UseVisualStyleBackColor = false;

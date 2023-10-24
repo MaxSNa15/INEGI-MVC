@@ -2,14 +2,6 @@ CREATE DATABASE CensoPoblacion;
 
 USE CensoPoblacion;
 
--- Tabla Vivienda
-CREATE TABLE Vivienda (
-    ID_Vivienda INT AUTO_INCREMENT PRIMARY KEY,
-    Direccion VARCHAR(255) NOT NULL,
-    Tipo ENUM('concreto', 'adobe antiguo', 'ladrillo', 'madera', 'cartón', 'piedra', 'prefabricada', 'material ecológico', 'paja/ramas/caña', 'adobe moderno') NOT NULL,
-    FOREIGN KEY (ID_Municipio) REFERENCES Localidades(ID_Localidad)
-);
-
 -- Tabla Municipios
 CREATE TABLE Municipios (
     ID_Municipio INT AUTO_INCREMENT PRIMARY KEY,
@@ -24,6 +16,15 @@ CREATE TABLE Localidades (
     Nombre VARCHAR(255) NOT NULL,
     ID_Municipio INT,
     FOREIGN KEY (ID_Municipio) REFERENCES Municipios(ID_Municipio)
+);
+
+-- Tabla Vivienda
+CREATE TABLE Vivienda (
+    ID_Vivienda INT AUTO_INCREMENT PRIMARY KEY,
+    Direccion VARCHAR(255) NOT NULL,
+    Tipo ENUM('concreto', 'adobe antiguo', 'ladrillo', 'madera', 'cartón', 'piedra', 'prefabricada', 'material ecológico', 'paja/ramas/caña', 'adobe moderno') NOT NULL,
+    ID_Localidad INT,
+    FOREIGN KEY (ID_Localidad) REFERENCES Localidades(ID_Localidad)
 );
 
 -- Tabla Habitante
@@ -59,3 +60,5 @@ CREATE TABLE Usuario (
     FIRSTNAME VARCHAR(255),
     LASTNAME VARCHAR(255)
 );
+
+INSERT INTO Usuario (Nickname, Contrasena, FIRSTNAME, LASTNAME) VALUES ('admin', 'admin', 'Administrador', 'Principal');

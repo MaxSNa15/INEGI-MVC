@@ -23,6 +23,7 @@ namespace INEGI.src.controllers
             this.vwPrincipal.btnHab.Click += new EventHandler(OpenHabitante);
             this.vwPrincipal.btnAct.Click += new EventHandler(OpenActividad);
             this.vwPrincipal.btnUsu.Click += new EventHandler(OpenUsuario);
+            this.vwPrincipal.btnDash.Click += new EventHandler(OpenDashboard);
             this.vwPrincipal.btnOut.Click += new EventHandler(Logout);
         }
 
@@ -83,6 +84,12 @@ namespace INEGI.src.controllers
             vwPrincipal.btnUsu.BackColor = Color.FromArgb(12,61,92);
         }
 
+        private void OpenDashboard(object? sender, EventArgs e)
+        {
+            OpenForm<FrmDash>();
+            vwPrincipal.btnDash.BackColor = Color.FromArgb(12,61,92);
+        }
+
         private void CloseForms(object? sender, FormClosedEventArgs e)
         {
             if(Application.OpenForms["FrmVivienda"] == null)
@@ -100,6 +107,10 @@ namespace INEGI.src.controllers
             if(Application.OpenForms["FrmUsuario"] == null)
             {
                 vwPrincipal.btnUsu.BackColor = Color.FromArgb(4,41,68);
+            }
+            if(Application.OpenForms["FrmDash"] == null)
+            {
+                vwPrincipal.btnDash.BackColor = Color.FromArgb(4,41,68);
             }
         }
         #endregion

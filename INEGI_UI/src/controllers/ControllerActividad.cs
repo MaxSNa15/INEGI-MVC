@@ -10,6 +10,10 @@ namespace INEGI.src.controllers
         private QueryActividad qyActividad;
         private QueryVivienda qyVivienda;
         private FrmActividad vwActividad;
+        // Variables
+        private int idActividad;
+        private int idVivienda;
+
 
         public ControllerActividad(ModelActividad mdActividad, QueryActividad qyActividad, QueryVivienda qyVivienda,FrmActividad vwActividad)
         {
@@ -22,6 +26,10 @@ namespace INEGI.src.controllers
             this.vwActividad.Load += new EventHandler(Load);
             this.vwActividad.btnAgre.Click += new EventHandler(AddActividad);
             this.vwActividad.btnActHab.Click += new EventHandler(AddActHab);
+            this.vwActividad.clbAct.ItemCheck += new ItemCheckEventHandler(SelectActivi);
+            this.vwActividad.clbVivi.ItemCheck += new ItemCheckEventHandler(SelectVivi);
+            this.vwActividad.btnCancelar.Click += new EventHandler(Cancelar);
+            this.vwActividad.btnContinuar.Click += new EventHandler(Continuar);
         }
 
         private void Actualizar()
@@ -56,6 +64,70 @@ namespace INEGI.src.controllers
         private void Load(object? sender, EventArgs e)
         {
             Actualizar();
+        }
+
+        private void SelectActivi(object? sender, ItemCheckEventArgs e)
+        {
+            //Gurda el id de la actividad
+            idActividad = e.Index + 1;
+            //Desaviar el checkList
+            vwActividad.clbAct.Enabled = false;
+            // Ver el boton de cancelar
+            vwActividad.btnCancelar.Visible = true;
+            // Habilitar el checkList de vivienda
+            vwActividad.clbVivi.Enabled = true;
+        }
+
+        private void SelectVivi(object? sender, ItemCheckEventArgs e)
+        {
+            // Guarda el id de la vivienda
+            idVivienda = e.Index + 1;
+            // Desactivar el checkList
+            vwActividad.clbVivi.Enabled = false;
+            // Ver el boton de continuar
+            vwActividad.btnContinuar.Visible = true;
+        }
+
+        private void Cancelar(object? sender, EventArgs e)
+        {
+            //Deseleccionar los checkList
+            vwActividad.clbAct.SetItemChecked(idActividad - 1, false);
+            //Desactivar los checkList
+            vwActividad.clbAct.Enabled = true;
+            vwActividad.clbVivi.Enabled = false;
+            // if(vwActividad.clbVivi.Items.Count != 0)
+            // {
+            //     vwActividad.clbVivi.SetItemChecked(idVivienda - 1, false);
+            // }
+            //Ocultar los botones
+            vwActividad.btnContinuar.Visible = false;
+            vwActividad.btnCancelar.Visible = false;
+        }
+
+        private void Continuar(object? sender, EventArgs e)
+        {
+            // Hacer registro en vivienda_actividad
+            mdActividad.idActividad = idActividad;
+            mdActividad.idVivienda = idVivienda;
+            if(qyActividad.IngresarViviendaActividad(mdActividad))
+            {
+                MessageBox.Show("Se ha registrado correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Deseleccionar los checkList
+                vwActividad.clbVivi.SetItemChecked(idVivienda - 1, false);
+                vwActividad.clbAct.SetItemChecked(idActividad - 1, false);
+                //Ocultar el boton de continuar
+                vwActividad.btnContinuar.Visible = false;
+                //Desactivar los checkList
+                vwActividad.clbVivi.Enabled = false;
+                //Activar el checkList
+                vwActividad.clbAct.Enabled = true;
+                //Ocultar el boton de cancelar
+                vwActividad.btnCancelar.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido registrar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void AddActividad(object? sender, EventArgs e)

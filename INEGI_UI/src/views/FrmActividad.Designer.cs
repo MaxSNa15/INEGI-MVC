@@ -39,6 +39,8 @@
             clbVivi = new CheckedListBox();
             lblVivi = new Label();
             lblAct = new Label();
+            btnCancelar = new Button();
+            btnContinuar = new Button();
             SuspendLayout();
             // 
             // lblTitulo
@@ -153,11 +155,37 @@
             lblAct.TabIndex = 27;
             lblAct.Text = "Actividades:";
             // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.FromArgb(255, 128, 128);
+            btnCancelar.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCancelar.Location = new Point(317, 394);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(137, 36);
+            btnCancelar.TabIndex = 28;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Visible = false;
+            // 
+            // btnContinuar
+            // 
+            btnContinuar.BackColor = Color.FromArgb(128, 255, 128);
+            btnContinuar.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnContinuar.Location = new Point(492, 394);
+            btnContinuar.Name = "btnContinuar";
+            btnContinuar.Size = new Size(137, 36);
+            btnContinuar.TabIndex = 29;
+            btnContinuar.Text = "Continuar";
+            btnContinuar.UseVisualStyleBackColor = false;
+            btnContinuar.Visible = false;
+            // 
             // FrmActividad
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(960, 610);
+            Controls.Add(btnContinuar);
+            Controls.Add(btnCancelar);
             Controls.Add(lblAct);
             Controls.Add(lblVivi);
             Controls.Add(clbVivi);
@@ -190,5 +218,7 @@
         public Button btnAgre;
         public CheckedListBox clbAct;
         public CheckedListBox clbVivi;
+        public Button btnCancelar;
+        public Button btnContinuar;
     }
 }
